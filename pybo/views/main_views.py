@@ -5,6 +5,10 @@ from flask import Blueprint
 
 bp = Blueprint('main', __name__, url_prefix='/')
 
-@bp.route('/')
+@bp.route('/hello')
 def hello_pybo():
     return 'hello python'
+
+@bp.route('/')
+def index():
+    return 'pybo index'
